@@ -1,5 +1,6 @@
 package me.meowquantum.com.minas;
 
+import me.meowquantum.com.minas.Api.MineAPI;
 import me.meowquantum.com.minas.Commands.MineCommand;
 import me.meowquantum.com.minas.Events.WandListener;
 import me.meowquantum.com.minas.Managers.MineManager;
@@ -12,12 +13,14 @@ public final class Minas extends JavaPlugin {
     private WandListener wandListener;
     private MineManager mineManager;
     private MineResetTask resetTask;
+    private MineAPI mineAPI;
 
     @Override
     public void onEnable() {
         this.wandListener = new WandListener();
         this.mineManager = new MineManager(getDataFolder());
         this.resetTask = new MineResetTask(this);
+        this.mineAPI = new MineAPI(mineManager);
         this.resetTask.runTaskTimer(this, 20L, 20L);
 
         getCommand("mine").setExecutor(new MineCommand(this));
@@ -42,5 +45,9 @@ public final class Minas extends JavaPlugin {
 
     public void setResetTask(MineResetTask resetTask) {
         this.resetTask = resetTask;
+    }
+
+    public MineAPI getMineAPI() {
+        return mineAPI;
     }
 }
