@@ -1,0 +1,6 @@
+name: Minas
+version: '${project.version}'
+main: me.meowquantum.com.minas.Minas
+commands:
+  mine:
+    aliases: [ mines ]

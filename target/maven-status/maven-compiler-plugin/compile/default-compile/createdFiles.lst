@@ -1,0 +1,8 @@
+me\meowquantum\com\minas\Minas.class
+me\meowquantum\com\minas\Managers\MineManager$1.class
+me\meowquantum\com\minas\Managers\MineManager.class
+me\meowquantum\com\minas\Commands\MineCommand.class
+me\meowquantum\com\minas\Events\WandListener.class
+me\meowquantum\com\minas\Placeholders\MinaExpansion.class
+me\meowquantum\com\minas\Tasks\MineResetTask.class
+me\meowquantum\com\minas\Api\MineAPI.class

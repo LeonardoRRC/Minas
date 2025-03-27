@@ -1,0 +1,6 @@
+name: Minas
+version: '1.0-SNAPSHOT'
+main: me.meowquantum.com.minas.Minas
+commands:
+  mine:
+    aliases: [ mines ]
